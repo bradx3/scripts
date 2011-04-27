@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Forums &gt; What.CD :: What.CD</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Torrents" href="/opensearch_torrents.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Requests" href="/opensearch_requests.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Forums" href="/opensearch_forums.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Log" href="/opensearch_log.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Users" href="/opensearch_users.xml">
+	<link rel="alternate" type="application/rss+xml" href="/feeds.php?user=50616&amp;auth=510b290f874fdf49d425b7ae4ecc5306" title="What.CD - News" />
+	<link href="what.css" title="External CSS" rel="stylesheet" type="text/css" media="screen" />
+	<link href="http://images.what.cd/styles/log.css" rel="stylesheet" type="text/css" />
+	<script src="http://images.what.cd/functions/global.js" type="text/javascript"></script>
+
+</head>
+<body id="forums">
+
+<div id="wrapper">
+<h1 class="hidden">What.cd</h1>
+
+<div id="header">
+	<div id="logo"><a href="index.php"></a></div>
+	<div id="userinfo">
+		<ul id="userinfo_username">
+			<li><a href="user.php?id=50616" class="username">bradx3</a></li>
+			<li class="brackets"><a href="user.php?action=edit&amp;userid=50616">Edit</a></li>
+			<li class="brackets"><a href="logout.php?auth=a0649725ade7e1a7e66f9f0284157685">Logout</a></li>
+		</ul>
+		<ul id="userinfo_major">
+			<li class="brackets"><strong><a href="upload.php">Upload</a></strong></li>
+			<li class="brackets"><strong><a href="user.php?action=invite">Invite</a></strong></li>
+			<li class="brackets"><strong><a href="donate.php">Donate</a></strong></li>
+		</ul>
+		<ul id="userinfo_stats">
+			<li>Up: <span class="stat">16.36 GB</span></li>
+			<li>Down: <span class="stat">15.21 GB</span></li>
+			<li>Ratio: <span class="stat"><span class="r10">1.08</span></span></li>
+		</ul>
+		<ul id="userinfo_minor">
+			<li><a href="inbox.php">Inbox</a></li>
+			<li><a href="torrents.php?type=uploaded&amp;userid=50616">Uploads</a></li>
+			<li><a href="bookmarks.php">Bookmarks</a></li>
+			<li><a href="torrents.php?type=snatched&userid=50616">Snatches</a></li>
+			<li><a href="requests.php?type=created">Requests</a></li>
+			<li><a href="userhistory.php?action=posts&amp;userid=50616">Posts</a></li>
+			<li><a href="friends.php">Friends</a></li>
+		</ul>
+	</div>
+	<div id="menu">
+		<h4 class="hidden">Site Menu</h4>
+		<ul>
+			<li id="nav_index"><a href="index.php">Home</a></li>
+			<li id="nav_torrents"><a href="torrents.php">Torrents</a></li>
+			<li id="nav_requests"><a href="requests.php">Requests</a></li>
+			<li id="nav_forums"><a href="forums.php">Forums</a></li>
+			<li id="nav_top10"><a href="top10.php">Top&nbsp;10</a></li>
+			<li id="nav_rules"><a href="rules.php">Rules</a></li>
+			<li id="nav_kb"><a href="kb.php">Help</a></li>
+			<li id="nav_staff"><a href="staff.php">Staff</a></li>
+		</ul>
+	</div>
+	<div id="alerts">
+	</div>
+	<div id="searchbars">
+		<ul>
+			<li>
+				<span class="hidden">Torrents: </span>
+				<form action="torrents.php" method="get">
+					<input
+						onfocus="if (this.value == 'Torrents') this.value='';"
+						onblur="if (this.value == '') this.value='Torrents';"
+						value="Torrents" type="text" name="searchstr" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Requests: </span>
+				<form action="requests.php" method="get">
+					<input
+						onfocus="if (this.value == 'Requests') this.value='';"
+						onblur="if (this.value == '') this.value='Requests';"
+						value="Requests" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Forums: </span>
+				<form action="forums.php" method="get">
+					<input value="search" type="hidden" name="action" />
+					<input
+						onfocus="if (this.value == 'Forums') this.value='';"
+						onblur="if (this.value == '') this.value='Forums';"
+						value="Forums" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Log: </span>
+				<form action="log.php" method="get">
+					<input
+						onfocus="if (this.value == 'Log') this.value='';"
+						onblur="if (this.value == '') this.value='Log';"
+						value="Log" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Users: </span>
+				<form action="user.php" method="get">
+					<input type="hidden" name="action" value="search" />
+					<input
+						onfocus="if (this.value == 'Users') this.value='';"
+						onblur="if (this.value == '') this.value='Users';"
+						value="Users" type="text" name="username" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+		</ul>
+	</div>
+
+</div>
+<div id="content">
+<div class="thin">
+<h2><a href="forums.php">Forums</a> &gt; What.CD</h2>
+	<div class="linkbox">
+		<a href="forums.php?action=new&amp;forumid=13">New Thread</a>
+	</div>
+<div class="linkbox">
+<strong>1</strong> | <a href="forums.php?page=2&amp;action=viewforum&amp;forumid=13"><strong>2</strong></a> | <a href="forums.php?page=3&amp;action=viewforum&amp;forumid=13"><strong>3</strong></a> | <a href="forums.php?page=4&amp;action=viewforum&amp;forumid=13"><strong>4</strong></a> | <a href="forums.php?page=5&amp;action=viewforum&amp;forumid=13"><strong>5</strong></a> | <a href="forums.php?page=6&amp;action=viewforum&amp;forumid=13"><strong>6</strong></a> | <a href="forums.php?page=7&amp;action=viewforum&amp;forumid=13"><strong>7</strong></a> | <a href="forums.php?page=8&amp;action=viewforum&amp;forumid=13"><strong>8</strong></a> | <a href="forums.php?page=9&amp;action=viewforum&amp;forumid=13"><strong>9</strong></a> | <a href="forums.php?page=10&amp;action=viewforum&amp;forumid=13"><strong>10</strong></a> | <a href="forums.php?page=11&amp;action=viewforum&amp;forumid=13"><strong>11</strong></a> | <a href="forums.php?page=2&amp;action=viewforum&amp;forumid=13"><strong>Next</strong></a> <a href="forums.php?page=55&amp;action=viewforum&amp;forumid=13"><strong>&gt;&gt;</strong></a></div>
+<table width="100%">
+	<tr class="colhead">
+		<td>Read</td>
+		<td style="width:320px;">Topic</td>
+		<td>Replies</td>
+		<td>Author</td>
+		<td>Last Post</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Sticky: 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=12820">Official &quot;Submit The Most Unique Stylesheet&quot; ...</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=4">4</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=5">5</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=6">6</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=7">7</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=8">8</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=9">9</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=10">10</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=11">11</a> <a href="forums.php?action=viewthread&amp;threadid=12820&amp;page=12">12</a>) 
+			</p>
+		</td>
+		<td>294</td>
+		<td>Biiaru</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=50893">xMannequiNx</a> Just now</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Sticky: 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=9342">The Official Re-Seed Request Page</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=9342&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=9342&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=9342&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=9342&amp;page=4">4</a>) 
+			</p>
+		</td>
+		<td>78</td>
+		<td>youngwriter</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=59893">loglow</a> 11 hours and 44 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Sticky: 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=13240">New Invite System</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=13240&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=13240&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=13240&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=13240&amp;page=4">4</a> <a href="forums.php?action=viewthread&amp;threadid=13240&amp;page=5">5</a> <a href="forums.php?action=viewthread&amp;threadid=13240&amp;page=6">6</a>) 
+			</p>
+		</td>
+		<td>128</td>
+		<td>Yibbles</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=33307">eddie27</a> 13 hours and 41 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Sticky: 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=5202">How are the Staff doing? (Part II)</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=4">4</a> <a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=5">5</a> <a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=6">6</a> <a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=7">7</a> <a href="forums.php?action=viewthread&amp;threadid=5202&amp;page=8">8</a>) 
+			</p>
+		</td>
+		<td>176</td>
+		<td>Emm</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=42299">broomhead</a> 1 day, 1 hour ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Sticky: 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=12491">Knowingly filling requests with fake stuff, g...</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=12491&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=12491&amp;page=2">2</a>) 
+			</p>
+		</td>
+		<td>44</td>
+		<td>xorian</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=7222">Hemmer</a> 1 day, 5 hours ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Sticky: 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=768">OiNKPlus - add similar artists and preview pl...</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=768&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=4">4</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=5">5</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=6">6</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=7">7</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=8">8</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=9">9</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=10">10</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=11">11</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=12">12</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=13">13</a> <a href="forums.php?action=viewthread&amp;threadid=768&amp;page=14">14</a>) 
+			</p>
+		</td>
+		<td>335</td>
+		<td>Indieana</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=67826">Salmon</a> 1 day, 6 hours ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Locked Sticky: 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=6032">THIS IS NOT THE HELP FORUM</a>
+				</strong> 
+			</p>
+		</td>
+		<td>15</td>
+		<td>b4byf4c3</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=8113">hawkinbj</a> 3 months, 1 week ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=13285">Finding FLACs to convert to V0</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=13285&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=13285&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=13285&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=13285&amp;page=4">4</a>) 
+			</p>
+		</td>
+		<td>86</td>
+		<td>420rasta</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=53813">DarkSide</a> 41 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14528">Any skins for this site. I hate the brown.</a>
+				</strong> 
+			</p>
+		</td>
+		<td>3</td>
+		<td>IncomingF5</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=41114">JJP</a> 1 hour and 47 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14534">tracker down?</a>
+				</strong> 
+			</p>
+		</td>
+		<td>13</td>
+		<td>chuckv64</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=22354">deuec6000</a> 2 hours and 8 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=9054">Power User as a Goal</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=4">4</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=5">5</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=6">6</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=7">7</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=8">8</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=9">9</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=10">10</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=11">11</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=12">12</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=13">13</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=14">14</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=15">15</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=16">16</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=17">17</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=18">18</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=19">19</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=20">20</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=21">21</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=22">22</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=23">23</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=24">24</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=25">25</a> <a href="forums.php?action=viewthread&amp;threadid=9054&amp;page=26">26</a>) 
+			</p>
+		</td>
+		<td>633</td>
+		<td>iMatt711</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=34728">LostChild1</a> 3 hours and 28 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14407">So how many gigs did you upload during FLACle...</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=14407&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=14407&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=14407&amp;page=3">3</a>) 
+			</p>
+		</td>
+		<td>59</td>
+		<td>lualua</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=66870">Tetrohead</a> 3 hours and 35 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=375">What.cd Last.fm group</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=375&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=4">4</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=5">5</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=6">6</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=7">7</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=8">8</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=9">9</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=10">10</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=11">11</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=12">12</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=13">13</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=14">14</a> <a href="forums.php?action=viewthread&amp;threadid=375&amp;page=15">15</a>) 
+			</p>
+		</td>
+		<td>356</td>
+		<td></td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=51041">Sjappie</a> 4 hours and 8 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14017">No gay tags allowed!</a>
+				</strong> 
+			</p>
+		</td>
+		<td>24</td>
+		<td>baglieg</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=59877">SoapDuck</a> 4 hours and 37 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=13884">Gone to hell</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=13884&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=13884&amp;page=2">2</a>) 
+			</p>
+		</td>
+		<td>48</td>
+		<td>bluesgod</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=56601">IRNBRU</a> 4 hours and 58 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14512">:( please recolour the ratio at the top of th...</a>
+				</strong> 
+			</p>
+		</td>
+		<td>6</td>
+		<td>alux</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=14893">Huevoos</a> 6 hours and 59 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14392">A Standard for Torrents</a>
+				</strong> 
+			</p>
+		</td>
+		<td>10</td>
+		<td>jlnfrtn</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=64292">jlnfrtn</a> 7 hours and 35 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14482">media type for upload--electronic?</a>
+				</strong> 
+			</p>
+		</td>
+		<td>8</td>
+		<td>N</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=4932">N</a> 8 hours and 12 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=5600">100 Torrents Uploaded Club</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=5600&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=5600&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=5600&amp;page=3">3</a>) 
+			</p>
+		</td>
+		<td>51</td>
+		<td>blueboybob</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=19695">avan</a> 10 hours and 49 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=12306">Tags.  Get it together people!</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=12306&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=12306&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=12306&amp;page=3">3</a>) 
+			</p>
+		</td>
+		<td>74</td>
+		<td>Evahnyird</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=14502">lex3191</a> 17 hours and 39 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14366">Will What.CD Have a FreeLeech Period Again?</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=14366&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=14366&amp;page=2">2</a>) 
+			</p>
+		</td>
+		<td>30</td>
+		<td>TehEnergy</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=15101">grunt</a> 22 hours and 57 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14373">why request popular albums?</a>
+				</strong> 
+			</p>
+		</td>
+		<td>10</td>
+		<td>ronjon13</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=15101">grunt</a> 23 hours and 17 minutes ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=7789">The Positive Crew</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=3">3</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=4">4</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=5">5</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=6">6</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=7">7</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=8">8</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=9">9</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=10">10</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=11">11</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=12">12</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=13">13</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=14">14</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=15">15</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=16">16</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=17">17</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=18">18</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=19">19</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=20">20</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=21">21</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=22">22</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=23">23</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=24">24</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=25">25</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=26">26</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=27">27</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=28">28</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=29">29</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=30">30</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=31">31</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=32">32</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=33">33</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=34">34</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=35">35</a> <a href="forums.php?action=viewthread&amp;threadid=7789&amp;page=36">36</a>) 
+			</p>
+		</td>
+		<td>898</td>
+		<td>GrandPuba</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=23205">padutch</a> 1 day, 2 hours ago</p>
+		</td>
+	</tr>
+	<tr class="rowa">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+Locked 				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=11886">Request a custom CSS!</a>
+				</strong>	 (<a href="forums.php?action=viewthread&amp;threadid=11886&amp;page=1">1</a> <a href="forums.php?action=viewthread&amp;threadid=11886&amp;page=2">2</a> <a href="forums.php?action=viewthread&amp;threadid=11886&amp;page=3">3</a>) 
+			</p>
+		</td>
+		<td>73</td>
+		<td>oorza</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=23">A9</a> 1 day, 3 hours ago</p>
+		</td>
+	</tr>
+	<tr class="rowb">
+		<td>
+unread		</td>
+		<td>
+			<p class="min_padding">
+				<strong>
+					<a href="forums.php?action=viewthread&amp;threadid=14012">No Power User yet :(</a>
+				</strong> 
+			</p>
+		</td>
+		<td>14</td>
+		<td>Dyl</td>
+		<td>
+			<p class="min_padding">By <a href="user.php?id=34728">LostChild1</a> 1 day, 3 hours ago</p>
+		</td>
+	</tr>
+</table>
+<div class="linkbox">
+<strong>1</strong> | <a href="forums.php?page=2&amp;action=viewforum&amp;forumid=13"><strong>2</strong></a> | <a href="forums.php?page=3&amp;action=viewforum&amp;forumid=13"><strong>3</strong></a> | <a href="forums.php?page=4&amp;action=viewforum&amp;forumid=13"><strong>4</strong></a> | <a href="forums.php?page=5&amp;action=viewforum&amp;forumid=13"><strong>5</strong></a> | <a href="forums.php?page=6&amp;action=viewforum&amp;forumid=13"><strong>6</strong></a> | <a href="forums.php?page=7&amp;action=viewforum&amp;forumid=13"><strong>7</strong></a> | <a href="forums.php?page=8&amp;action=viewforum&amp;forumid=13"><strong>8</strong></a> | <a href="forums.php?page=9&amp;action=viewforum&amp;forumid=13"><strong>9</strong></a> | <a href="forums.php?page=10&amp;action=viewforum&amp;forumid=13"><strong>10</strong></a> | <a href="forums.php?page=11&amp;action=viewforum&amp;forumid=13"><strong>11</strong></a> | <a href="forums.php?page=2&amp;action=viewforum&amp;forumid=13"><strong>Next</strong></a> <a href="forums.php?page=55&amp;action=viewforum&amp;forumid=13"><strong>&gt;&gt;</strong></a></div>
+</div>
+</div>
+<div id="footer">
+	<p>Site and design &copy; 2008 What.CD</p>
+	<p>This page was created in 0.00611 second(s) on Fri, 23 May 2008 11:46 PM</p>
+	<p>
+	
+</div>
+
+</div>
+<div id="lightbox" class="lightbox"></div>
+<div id="curtain" class="curtain"></div>
+</body>
+</html>

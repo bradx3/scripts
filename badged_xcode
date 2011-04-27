@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# This script will open up XCode for the IPhone project in the current directory.
+# The Xcode dock icon will have a small badge of the IPhone apps Icon.png. 
+# The original XCode icon will be restored after closing XCode.
+#
+# ImageMagick is required.
+#
+# N.B. You might need to set write permission in the XCode app if it is system 
+# wide.
+
+# Change these if you need to.
+XCODE=/Developer/Applications/Xcode.app/
+TEMP=/tmp
+
+# Probably don't need to change this
+RESOURCES=$XCODE/Contents/Resources/
+
+if [ ! -e $RESOURCES/appicon.orig.icns ]
+then
+	cp $RESOURCES/appicon.icns $RESOURCES/appicon.orig.icns 
+fi
+
+sips -s format tiff $RESOURCES/appicon.icns --out $TEMP/Xcode.tiff
+composite -gravity SouthEast -geometry "200x200-0-0" Icon.png $TEMP/Xcode.tiff $TEMP/out.tiff
+convert $TEMP/out.tiff -resize 128x128 $TEMP/out.tiff  
+tiff2icns $TEMP/out.tiff
+cp $TEMP/out.icns $RESOURCES/appicon.icns
+open -W *.xcodeproj
+cp $RESOURCES/appicon.orig.icns $RESOURCES/appicon.icns 
+

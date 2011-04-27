@@ -1,0 +1,3 @@
+#!/bin/sh
+javac src/*.java -cp lib/jaudiotagger.jar -d bin
+java -cp lib/jaudiotagger.jar:bin FindDupes "$@"

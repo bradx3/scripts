@@ -1,0 +1,400 @@
+/* elements */
+body, div, span, input, select, h1, h2, h3, h4, textarea {
+  background-color: black;
+  color: white;
+  font-family: Monaco, Consolas, monospace;
+  margin: 0px;
+  padding: 0px;
+}
+body, div, span, input, select {
+  font-size: 11px;
+}
+a {
+  color: cyan;
+}
+a:hover {
+  background-color: dimgrey;
+}
+b, strong {
+  font-weight: normal;
+}
+h1 {
+  font-size: 22px;
+  margin: 10px 0px 0px 10px;
+  padding: 0px;
+  text-transform: lowercase;
+}
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 15px;
+}
+h4 {
+  font-size: 13px;
+  margin: 0px;
+  padding: 0px;
+}
+input, select, textarea {
+  border: 1px solid dimgrey;
+  padding: 1px;
+}
+table {
+  border-collapse: collapse;  
+  margin: 0px;
+  padding: 0px;
+}
+/* general classes */
+.box {
+  padding: 0px 0px 20px 0px;
+}
+.hide {
+  display: none !important;
+}
+.nobr {
+  white-space: nowrap;
+}
+.nobullet {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.rowa td, .rowb td {
+  border-bottom: 1px solid #333333;
+padding: 3px 0px 3px 0px;
+}
+.tags {
+  font-size: 9px;
+  padding-bottom: 3px;
+}
+ul.thin {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 0px 0px 10px;
+}
+/* common header */
+#header {
+  position: relative;
+  text-transform: lowercase;
+}
+#logo {
+  display: none;
+}
+/* user links (name, upload, inbox, etc) */
+#userinfo {
+  top: -9px;
+  right: 6px;
+  position: absolute;
+}
+#userinfo ul {
+  border-left: 2px solid magenta;
+  display: inline;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 0px 0px 5px;
+}
+#userinfo li {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+}
+/* user stats (up, down, etc) */
+#userinfo_stats {
+  position: absolute;
+  right: 0px;
+  top: -23px;
+}
+#userinfo_stats {
+  padding-left: 15px !important;
+}
+#userinfo_stats .stat span {
+  color: white !important;
+}
+/* site menu (home, forums, top10, etc) */
+#menu {
+  padding-right: 8px;
+  position: absolute;
+  right: 306px;
+  top: -32px;
+  white-space: nowrap;
+}
+#menu h4 {
+  display: none;
+}
+#menu ul {
+  border-left: 2px solid magenta;
+  display: inline;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 0px 0px 5px;
+}
+#menu li {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+}
+/* search bars */
+#searchbars {
+  position: absolute;
+  right: 7px;
+  top: 13px;
+  white-space: nowrap;
+}
+#searchbars ul {
+  border-left: 2px solid magenta;  
+  display: inline;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px 0px 0px 5px;
+}
+#searchbars input {
+  margin: 0px;
+  min-width: 103px;
+  text-transform: lowercase;
+  width: 100px;
+}
+#searchbars li {
+  display: inline;
+  padding: 5px 0px 0px 0px;
+}
+#searchbars form {
+  display: inline;
+}
+#searchbars .hidden {
+  display: none;
+}
+/* alerts */
+#alerts {
+  color: red;
+  font-size: 15px;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+/* common sidebar content */
+.sidebar {
+  zoom: 1 !important; /* fucking ie */
+}
+.sidebar .box {
+  float: left;
+  padding-left: 15px;
+}
+.sidebar .box ul, .sidebar .box li {
+  margin 0px;
+  padding: 0px;
+}
+.sidebar .head {
+  display: block;
+}
+/* content */
+#content {
+  border-top: 1px dashed dimgrey;
+  margin: 45px 0px 10px 0px;
+  padding: 15px 10px 0px 10px;
+}
+.main_column {
+  clear: both;
+}
+.main_column .box {
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
+  padding-top: 20px;
+}
+.head {
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+/* index sidebar fixes */
+#index .sidebar .box + .box {
+  float: right;
+  width: 70%;
+}
+#index .sidebar .stats span {
+  color: white !important;
+}
+/* common footer */
+#footer {
+  margin: 30px 10px 0px 10px !important;
+}
+#footer, #disclaimer_container {
+  font-size: 9px;
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+  text-transform: lowercase;
+}
+/* torrent pages */
+.cat_list {
+  margin-top: 10px;
+}
+.hide_torrents {
+  background: black url(http://bradx3.googlepages.com/hide.png) no-repeat scroll center;
+  height:28px;
+  width:28px;
+}
+.linkbox {
+  padding: 5px 0px 5px 0px;
+  text-align: right;
+}
+.show_torrents {
+  background: black url(http://bradx3.googlepages.com/show.png) no-repeat scroll center;
+  height:28px;
+  width:28px;
+}
+.show_torrents_link {
+  border: none;
+  cursor: pointer;
+  display: block;
+  height:28px;
+  width:28px;
+}
+.show_torrents_link:hover {
+  background-color: transparent;
+}
+
+.submit {
+  padding-top: 10px;
+}
+.submit input {
+  cursor: pointer;
+  float: right;
+  margin-right: 5px;
+}
+#swaptags {
+  float: right;
+}
+#taglist {
+  display: block;
+  margin-top: 10px;
+}
+.torrent_table {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+.torrent_table .colhead img {
+  border: none;
+  display: block;
+}
+.torrent_table .group td, .torrent_table .torrent td {
+  border-bottom: 1px dotted #222222;
+  border-top: 1px solid #333333;
+  margin-top: 15px;
+  padding: 10px 5px 10px 5px;
+}
+.torrent_table .group td img, .torrent_table .torrent td img {
+  display: none; 
+}
+.torrent a, .group a {
+  color: white !important;
+}
+.torrent_table .group_torrent td {
+  padding-bottom: 3px;
+}
+.torrent_table .group_torrent span {
+  margin-left: 50px;
+}
+/* forums */
+.avatar {
+  width: 150px;
+}
+.forum_post {
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
+  width: 100%;
+}
+.forum_post .body {
+  padding: 10px 0px 10px 10px;  
+}
+.forum_post .body img {
+  display: block !important;
+}
+.forum_post blockquote {
+  border: 1px dotted #222222;
+  margin: 5px;
+  padding: 5px;
+}
+.forum_post .colhead_dark td {
+  padding-top: 10px;
+}
+#forums h3 {
+  padding-top: 10px;
+}
+#forums h4 {
+  padding-top: 3px;
+}
+#quickpost {
+  width: 100%;
+}
+#quickreplybuttons {
+  height: 25px;
+  padding: 10px 0px 0px 0px;
+}
+#quickreplybuttons input {
+  cursor: pointer;
+  float: right;
+  margin-left: 10px;
+}
+/* artist pages */
+#artist #content {
+  position: relative;
+}
+#artist .linkbox {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#artist .main_column {
+  clear: both;
+}
+#artist .sidebar .box {
+  display: inline-block;
+  float: left;
+  padding-left: 15px;
+}
+#artist .sidebar .head {
+  display: block;
+}
+/* requests */
+#requests td.center input {
+  cursor: pointer;
+}
+/* upload page */
+#post {
+  cursor: pointer;
+}
+/* top 10 */
+#top10 td {
+  padding: 3px 0px 3px 0px;
+} 
+/* help */
+#kb .sidebar .box {
+  width: 30%;
+}
+/* lightbox (thanks to mulletst0rm)*/
+.curtain {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  text-align: center;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  padding: 0px;
+  z-index: 1002;
+  overflow: auto;
+}

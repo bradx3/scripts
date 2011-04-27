@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Forums &gt; What.CD &gt; Official &quot;Submit The Most Unique Stylesheet&quot; Contest :: What.CD</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Torrents" href="/opensearch_torrents.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Requests" href="/opensearch_requests.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Forums" href="/opensearch_forums.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Log" href="/opensearch_log.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Users" href="/opensearch_users.xml">
+	<link rel="alternate" type="application/rss+xml" href="/feeds.php?user=50616&amp;auth=510b290f874fdf49d425b7ae4ecc5306" title="What.CD - News" />
+	<link href="terminal.cd.css" title="External CSS" rel="stylesheet" type="text/css" media="screen" />
+	<link href="http://images.what.cd/styles/log.css" rel="stylesheet" type="text/css" />
+	<script src="http://images.what.cd/functions/global.js" type="text/javascript"></script>
+	<script src="http://images.what.cd/functions/forums.js" type="text/javascript"></script>
+
+</head>
+<body id="forums">
+
+<div id="wrapper">
+<h1 class="hidden">What.cd</h1>
+
+<div id="header">
+	<div id="logo"><a href="index.php"></a></div>
+	<div id="userinfo">
+		<ul id="userinfo_username">
+			<li><a href="user.php?id=50616" class="username">bradx3</a></li>
+			<li class="brackets"><a href="user.php?action=edit&amp;userid=50616">Edit</a></li>
+			<li class="brackets"><a href="logout.php?auth=a0649725ade7e1a7e66f9f0284157685">Logout</a></li>
+		</ul>
+		<ul id="userinfo_major">
+			<li class="brackets"><strong><a href="upload.php">Upload</a></strong></li>
+			<li class="brackets"><strong><a href="user.php?action=invite">Invite</a></strong></li>
+			<li class="brackets"><strong><a href="donate.php">Donate</a></strong></li>
+		</ul>
+		<ul id="userinfo_stats">
+			<li>Up: <span class="stat">16.98 GB</span></li>
+			<li>Down: <span class="stat">15.46 GB</span></li>
+			<li>Ratio: <span class="stat"><span class="r10">1.10</span></span></li>
+		</ul>
+		<ul id="userinfo_minor">
+			<li><a href="inbox.php">Inbox</a></li>
+			<li><a href="torrents.php?type=uploaded&amp;userid=50616">Uploads</a></li>
+			<li><a href="bookmarks.php">Bookmarks</a></li>
+			<li><a href="torrents.php?type=snatched&userid=50616">Snatches</a></li>
+			<li><a href="requests.php?type=created">Requests</a></li>
+			<li><a href="userhistory.php?action=posts&amp;userid=50616">Posts</a></li>
+			<li><a href="friends.php">Friends</a></li>
+		</ul>
+	</div>
+	<div id="menu">
+		<h4 class="hidden">Site Menu</h4>
+		<ul>
+			<li id="nav_index"><a href="index.php">Home</a></li>
+			<li id="nav_torrents"><a href="torrents.php">Torrents</a></li>
+			<li id="nav_requests"><a href="requests.php">Requests</a></li>
+			<li id="nav_forums"><a href="forums.php">Forums</a></li>
+			<li id="nav_top10"><a href="top10.php">Top&nbsp;10</a></li>
+			<li id="nav_rules"><a href="rules.php">Rules</a></li>
+			<li id="nav_kb"><a href="kb.php">Help</a></li>
+			<li id="nav_staff"><a href="staff.php">Staff</a></li>
+		</ul>
+	</div>
+	<div id="alerts">
+	</div>
+	<div id="searchbars">
+		<ul>
+			<li>
+				<span class="hidden">Torrents: </span>
+				<form action="torrents.php" method="get">
+					<input
+						onfocus="if (this.value == 'Torrents') this.value='';"
+						onblur="if (this.value == '') this.value='Torrents';"
+						value="Torrents" type="text" name="searchstr" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Requests: </span>
+				<form action="requests.php" method="get">
+					<input
+						onfocus="if (this.value == 'Requests') this.value='';"
+						onblur="if (this.value == '') this.value='Requests';"
+						value="Requests" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Forums: </span>
+				<form action="forums.php" method="get">
+					<input value="search" type="hidden" name="action" />
+					<input
+						onfocus="if (this.value == 'Forums') this.value='';"
+						onblur="if (this.value == '') this.value='Forums';"
+						value="Forums" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Log: </span>
+				<form action="log.php" method="get">
+					<input
+						onfocus="if (this.value == 'Log') this.value='';"
+						onblur="if (this.value == '') this.value='Log';"
+						value="Log" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Users: </span>
+				<form action="user.php" method="get">
+					<input type="hidden" name="action" value="search" />
+					<input
+						onfocus="if (this.value == 'Users') this.value='';"
+						onblur="if (this.value == '') this.value='Users';"
+						value="Users" type="text" name="username" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+		</ul>
+	</div>
+
+</div>
+<div id="content">
+<div class="thin">
+<h2>
+	<a href="forums.php">Forums</a> &gt;
+	<a href="forums.php?action=viewforum&amp;forumid=13">What.CD</a> &gt;
+	Official &quot;Submit The Most Unique Stylesheet&quot; Contest</h2>
+<div class="linkbox">
+<a href="forums.php?page=1&amp;action=viewthread&amp;threadid=12820"><strong>&lt;&lt;</strong></a> <a href="forums.php?page=12&amp;action=viewthread&amp;threadid=12820"><strong>Prev</strong></a> | <a href="forums.php?page=1&amp;action=viewthread&amp;threadid=12820"><strong>1-25</strong></a> | <a href="forums.php?page=2&amp;action=viewthread&amp;threadid=12820"><strong>26-50</strong></a> | <a href="forums.php?page=3&amp;action=viewthread&amp;threadid=12820"><strong>51-75</strong></a> | <a href="forums.php?page=4&amp;action=viewthread&amp;threadid=12820"><strong>76-100</strong></a> | <a href="forums.php?page=5&amp;action=viewthread&amp;threadid=12820"><strong>101-125</strong></a> | <a href="forums.php?page=6&amp;action=viewthread&amp;threadid=12820"><strong>126-150</strong></a> | <a href="forums.php?page=7&amp;action=viewthread&amp;threadid=12820"><strong>151-175</strong></a> | <a href="forums.php?page=8&amp;action=viewthread&amp;threadid=12820"><strong>176-200</strong></a> | <a href="forums.php?page=9&amp;action=viewthread&amp;threadid=12820"><strong>201-225</strong></a> | <a href="forums.php?page=10&amp;action=viewthread&amp;threadid=12820"><strong>226-250</strong></a> | <a href="forums.php?page=11&amp;action=viewthread&amp;threadid=12820"><strong>251-275</strong></a> | <a href="forums.php?page=12&amp;action=viewthread&amp;threadid=12820"><strong>276-300</strong></a> | <strong>301-325</strong> | <a href="forums.php?page=14&amp;action=viewthread&amp;threadid=12820"><strong>326-329</strong></a> | <a href="forums.php?page=14&amp;action=viewthread&amp;threadid=12820"><strong>Next</strong></a> <a href="forums.php?page=14&amp;action=viewthread&amp;threadid=12820"><strong>&gt;&gt;</strong></a></div>
+<table class="forum_post box vertical_margin" id="post228556">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post228556'>#228556</a>
+			by <strong><a href="user.php?id=40275">jemaine</a> (User)</strong>
+			  
+2 days and 15 minutes ago - <a href="#quickpost" onclick="Quote('228556','jemaine');">[Quote]</a>
+			</span>
+			<span id="bar228556" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://xs224.xs.to/xs224/08095/1203036466461548.png' width='150' alt="jemaine's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content228556">
+				CSS code optimization will be included in the judging, but what about code readability?			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post228558">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post228558'>#228558</a>
+			by <strong><a href="user.php?id=774">Biiaru</a> (Artist)</strong>
+			  
+2 days and 12 minutes ago - <a href="#quickpost" onclick="Quote('228558','Biiaru');">[Quote]</a>
+			</span>
+			<span id="bar228558" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://marusu.channelblue.net/images/lpav/lpavatar.png' width='150' alt="Biiaru's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content228558">
+				You can optimize while still being readable. It's definitely possible.<br />
+<br />
+If you're worried about that, you may wish to link to both an optimized version and a readable version for judging.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post228660">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post228660'>#228660</a>
+			by <strong><a href="user.php?id=18061">salimdao</a> (Power User)</strong>
+			  
+1 day, 21 hours ago - <a href="#quickpost" onclick="Quote('228660','salimdao');">[Quote]</a>
+			</span>
+			<span id="bar228660" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://img145.imageshack.us/img145/1097/funnypicturescatblockscts8.jpg' width='150' alt="salimdao's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content228660">
+				film42 should still continue his WhatBook stylesheet. just bcuhs its against the rules in the contest doesnt mean we cant use it. he just wont be able to submit it, which is a bummer. but the rules were established from the beginning so theres no way around it.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post228718">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post228718'>#228718</a>
+			by <strong><a href="user.php?id=50616">bradx3</a> (Member)</strong>
+			  
+1 day, 19 hours ago - <a href="#quickpost" onclick="Quote('228718','bradx3');">[Quote]</a>
+ - <a href="#post228718" onclick="Edit_Form('228718');">[Edit]</a>
+			</span>
+			<span id="bar228718" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://blog.lucky-dip.net/images/theme/brad_head.gif' width='150' alt="bradx3's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content228718">
+				Here's something i am working on. it's inspired by my terminal/command line theme, but not any existing stylesheet - that's ok right?<br />
+<br />
+<img onload="Scale(this);" onclick="Scale(this);" src="http://img502.imageshack.us/img502/3421/picture18jq6.png" alt="http://img502.imageshack.us/img502/3421/picture18jq6.png" />				<br /><br />Last edited by
+				<a href="user.php?id=50616">bradx3</a> on
+				2008-05-25 01:12:24			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post228758">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post228758'>#228758</a>
+			by <strong><a href="user.php?id=7222">Hemmer</a><img src="http://images.what.cd/common/symbols/donor.png" alt="Donor" /> (Member)</strong>
+			  
+1 day, 17 hours ago - <a href="#quickpost" onclick="Quote('228758','Hemmer');">[Quote]</a>
+			</span>
+			<span id="bar228758" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://tn3-2.deviantart.com/fs10/300W/i/2006/119/2/a/If_I_can_t_see_you____by_Hemmer.jpg' width='150' alt="Hemmer's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content228758">
+				i actually quite like this one ^<br />
+<br />
+nice work!			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post228766">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post228766'>#228766</a>
+			by <strong><a href="user.php?id=18223">Bulan</a> (Member)</strong>
+			  
+1 day, 17 hours ago - <a href="#quickpost" onclick="Quote('228766','Bulan');">[Quote]</a>
+			</span>
+			<span id="bar228766" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://data.fuskbugg.se/skalman01/sexybluehairchickcx8.jpg' width='150' alt="Bulan's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content228766">
+				<strong>grandville</strong> Wrote: <blockquote><strong>Paaskehare</strong> Wrote: <blockquote><img onload="Scale(this);" onclick="Scale(this);" src="http://paaskehare.googlepages.com/what_mind_tricks.jpg" alt="http://paaskehare.googlepages.com/what_mind_tricks.jpg" /><br />
+<strong>&quot;This is my final revision of my entry.&quot;</strong><br />
+<br />
+ATM. It's called <strong>What Mind Tricks</strong>. Maybe a cooler name would be great ^^<br />
+<br />
+anyway, link to rss:<br />
+<a href='http://paaskehare.googlepages.com/style.css'>http://paaskehare.googlepages.com/style.css</a><br />
+<br />
+<strong>*EDIT new host:</strong><br />
+<a href='http://wipi.dk/what/style.css'>http://wipi.dk/what/style.css</a></blockquote><br />
+<br />
+this is the first unofficial css design that i've been 100% happy with. Stylish and Efficient. Thanks alot.</blockquote><br />
+<br />
+I'm using this one!!			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post228989">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post228989'>#228989</a>
+			by <strong><a href="user.php?id=40275">jemaine</a> (User)</strong>
+			  
+1 day, 11 hours ago - <a href="#quickpost" onclick="Quote('228989','jemaine');">[Quote]</a>
+			</span>
+			<span id="bar228989" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://xs224.xs.to/xs224/08095/1203036466461548.png' width='150' alt="jemaine's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content228989">
+				that terminal one is slick as balls.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post229007">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post229007'>#229007</a>
+			by <strong><a href="user.php?id=205">daisymcphaze</a> (Power User)</strong>
+			  
+1 day, 11 hours ago - <a href="#quickpost" onclick="Quote('229007','daisymcphaze');">[Quote]</a>
+			</span>
+			<span id="bar229007" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://www.b3ta.cr3ation.co.uk/data/jpg/biccyboo.jpg' width='150' alt="daisymcphaze's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content229007">
+				<strong>jemaine</strong> Wrote: <blockquote>that terminal one is slick as balls.</blockquote><br />
+<br />
++1<br />
+<br />
+i like the layout of the artist page, that is the shit.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post229097">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post229097'>#229097</a>
+			by <strong><a href="user.php?id=50063">film42</a><img src="http://images.what.cd/common/symbols/donor.png" alt="Donor" /> (Member)</strong>
+			  
+1 day, 9 hours ago - <a href="#quickpost" onclick="Quote('229097','film42');">[Quote]</a>
+			</span>
+			<span id="bar229097" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://www.pixeljoint.com/files/icons/full/ferretanimofdoom.gif' width='150' alt="film42's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content229097">
+				<strong>salimdao</strong> Wrote: <blockquote>film42 should still continue his WhatBook stylesheet. just bcuhs its against the rules in the contest doesnt mean we cant use it. he just wont be able to submit it, which is a bummer. but the rules were established from the beginning so theres no way around it.</blockquote><br />
+<br />
+It's coming, don't worry <img border='0' src='http://images.what.cd/common/smileys/smile.gif' alt='' />			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post229168">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post229168'>#229168</a>
+			by <strong><a href="user.php?id=774">Biiaru</a> (Artist)</strong>
+			  
+1 day, 8 hours ago - <a href="#quickpost" onclick="Quote('229168','Biiaru');">[Quote]</a>
+			</span>
+			<span id="bar229168" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://marusu.channelblue.net/images/lpav/lpavatar.png' width='150' alt="Biiaru's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content229168">
+				<strong>bradx3</strong> Wrote: <blockquote>Here's something i am working on. it's inspired by my terminal/command line theme, but not any existing stylesheet - that's ok right?</blockquote><br />
+<br />
+Yep, should be fine. Looking mighty nice, by the way... I can already tell that's the one I'll be using. :3			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post229228">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post229228'>#229228</a>
+			by <strong><a href="user.php?id=37801">thefalconer</a> (Artist)</strong>
+			  
+1 day, 7 hours ago - <a href="#quickpost" onclick="Quote('229228','thefalconer');">[Quote]</a>
+			</span>
+			<span id="bar229228" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://fc03.deviantart.com/fs15/f/2006/357/5/5/May_I_take_your_order__by_The_Falconer.jpg' width='150' alt="thefalconer's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content229228">
+				I've been following this thread from the beginning, and after seeing some of the entries, i'm thinking that the rewards should be changed to first second and third, with each of those entries being featured as official stylesheets. The work here is incredible, and I already see 3 or 4 stylesheets I wish I could have on all the time. I'm sure you guys aren't up for changing the rules, but maybe if there's the general feeling of what I'm saying on this thread, then a change will be made <img border='0' src='http://images.what.cd/common/smileys/smile.gif' alt='' /><br />
+<br />
+ALSO: as a totally sweet addition to the stylesheet page... if you could select multiple stylesheets and have it randomly select one each time you log on to the main page... that'd be pretty sweet <img border='0' src='http://images.what.cd/common/smileys/biggrin.gif' alt='' />			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post229912">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post229912'>#229912</a>
+			by <strong><a href="user.php?id=50063">film42</a><img src="http://images.what.cd/common/symbols/donor.png" alt="Donor" /> (Member)</strong>
+			  
+21 hours and 13 minutes ago - <a href="#quickpost" onclick="Quote('229912','film42');">[Quote]</a>
+			</span>
+			<span id="bar229912" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://www.pixeljoint.com/files/icons/full/ferretanimofdoom.gif' width='150' alt="film42's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content229912">
+				I know the whatbook theme was disqualified, however, anyone still interested, I have a progress update:<br />
+<br />
+TODO:<br />
+-Friends<br />
+-Posts<br />
+-Bookmarks<br />
+-Donate<br />
+-Invite<br />
+-Upload<br />
+-Edit<br />
+-Top 10<br />
+-Rules<br />
+-Help (a bit of debugging)<br />
+-Staff<br />
+-Log<br />
+-Users<br />
+-Forums (Search)<br />
+-Artists<br />
+<br />
+Almost done peeps <img border='0' src='http://images.what.cd/common/smileys/smile.gif' alt='' /><br />
+<br />
+I'll hopefully release it tomorrow.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post229970">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post229970'>#229970</a>
+			by <strong><a href="user.php?id=2464">fakiefakes</a> (Member)</strong>
+			  
+19 hours and 48 minutes ago - <a href="#quickpost" onclick="Quote('229970','fakiefakes');">[Quote]</a>
+			</span>
+			<span id="bar229970" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://images.what.cd/common/avatars/default.png' width='150' alt="Default avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content229970">
+				@ jemaine - I'm really enjoying using your stylesheet. Nice Work!!			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post229977">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post229977'>#229977</a>
+			by <strong><a href="user.php?id=9479">ryantheduke</a><img src="http://images.what.cd/common/symbols/donor.png" alt="Donor" /> (VIP)</strong>
+			 (Trendwhore) 
+19 hours and 17 minutes ago - <a href="#quickpost" onclick="Quote('229977','ryantheduke');">[Quote]</a>
+			</span>
+			<span id="bar229977" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://img257.imageshack.us/img257/8206/agentcooper0403nl1.jpg' width='150' alt="ryantheduke's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content229977">
+				<strong>bradx3</strong> Wrote: <blockquote>Here's something i am working on. it's inspired by my terminal/command line theme, but not any existing stylesheet - that's ok right?</blockquote><br />
+<br />
+that is slick, sir.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230067">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230067'>#230067</a>
+			by <strong><a href="user.php?id=2017">RustyBadger</a> (Power User)</strong>
+			  
+15 hours and 10 minutes ago - <a href="#quickpost" onclick="Quote('230067','RustyBadger');">[Quote]</a>
+			</span>
+			<span id="bar230067" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://image.bayimg.com/iajmaaabg.jpg' width='150' alt="RustyBadger's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230067">
+				film42: You should definitely carry on with it, I think it's awesome.				<br /><br />Last edited by
+				<a href="user.php?id=2017">RustyBadger</a> on
+				2008-05-26 05:05:31			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230217">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230217'>#230217</a>
+			by <strong><a href="user.php?id=35208">alderaan08</a> (Member)</strong>
+			  
+11 hours and 9 minutes ago - <a href="#quickpost" onclick="Quote('230217','alderaan08');">[Quote]</a>
+			</span>
+			<span id="bar230217" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://images.what.cd/common/avatars/default.png' width='150' alt="Default avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230217">
+				13hours?<br />
+i guess i best get working...lol<br />
+almost forgot about this			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230614">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230614'>#230614</a>
+			by <strong><a href="user.php?id=50616">bradx3</a> (Member)</strong>
+			  
+4 hours and 2 minutes ago - <a href="#quickpost" onclick="Quote('230614','bradx3');">[Quote]</a>
+ - <a href="#post230614" onclick="Edit_Form('230614');">[Edit]</a>
+			</span>
+			<span id="bar230614" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://blog.lucky-dip.net/images/theme/brad_head.gif' width='150' alt="bradx3's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230614">
+				Ok I think mine is going ok. it's called &quot;terminal.cd&quot; and can be used from this url:<br />
+<a href='http://bradx3.googlepages.com/terminal.cd.css'>http://bradx3.googlepages.com/terminal.cd.css</a><br />
+<br />
+it looks good webkit based browsers and firefox 2.x on mac. It looks ok in firefox on xp and not so bad in ie6 on xp. i just noticed that there is an extension, so i won't say that is the final version, and i haven't tested it in any other browsers, so i'd appreciate any words on what it works in and what it doesn't.<br />
+<br />
+As I said above, it's inspired by my favourite part of my computer - my terminal haha. so it's white on black and simple colours. it's also all lowercase and mostly non-bold. anwyay i hope people like it ok.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230627">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230627'>#230627</a>
+			by <strong><a href="user.php?id=60093">amoth</a> (Member)</strong>
+			  
+3 hours and 47 minutes ago - <a href="#quickpost" onclick="Quote('230627','amoth');">[Quote]</a>
+			</span>
+			<span id="bar230627" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://i239.photobucket.com/albums/ff55/_Bobi_/Gloves.jpg' width='150' alt="amoth's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230627">
+				<strong>bradx3</strong> Wrote: <blockquote>... anwyay i hope people like it ok.</blockquote><br />
+I do. A lot!			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230630">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230630'>#230630</a>
+			by <strong><a href="user.php?id=50616">bradx3</a> (Member)</strong>
+			  
+3 hours and 46 minutes ago - <a href="#quickpost" onclick="Quote('230630','bradx3');">[Quote]</a>
+ - <a href="#post230630" onclick="Edit_Form('230630');">[Edit]</a>
+			</span>
+			<span id="bar230630" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://blog.lucky-dip.net/images/theme/brad_head.gif' width='150' alt="bradx3's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230630">
+				aw shucks you are too kind lol			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230635">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230635'>#230635</a>
+			by <strong><a href="user.php?id=2017">RustyBadger</a> (Power User)</strong>
+			  
+3 hours and 44 minutes ago - <a href="#quickpost" onclick="Quote('230635','RustyBadger');">[Quote]</a>
+			</span>
+			<span id="bar230635" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://image.bayimg.com/iajmaaabg.jpg' width='150' alt="RustyBadger's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230635">
+				It looks ok in Firefox 3b5. But please let me use capitals, I get so confused just writing this.<br />
+<br />
+edit: ok, lightbox is not happy!				<br /><br />Last edited by
+				<a href="user.php?id=2017">RustyBadger</a> on
+				2008-05-26 16:35:14			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230640">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230640'>#230640</a>
+			by <strong><a href="user.php?id=50616">bradx3</a> (Member)</strong>
+			  
+3 hours and 40 minutes ago - <a href="#quickpost" onclick="Quote('230640','bradx3');">[Quote]</a>
+ - <a href="#post230640" onclick="Edit_Form('230640');">[Edit]</a>
+			</span>
+			<span id="bar230640" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://blog.lucky-dip.net/images/theme/brad_head.gif' width='150' alt="bradx3's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230640">
+				haha yeah i'm unsure about the lowercase. i like the way it looks, but it's a bit confusing when typing in stuff. Maybe leave input fields as normal case? maybe a version with everything just normal case?<br />
+<br />
+hey how can i test lightbox? and does anybody know how i can test a poll? i've already answered this one so i'm stuck with the results <img border='0' src='http://images.what.cd/common/smileys/sad.gif' alt='' />				<br /><br />Last edited by
+				<a href="user.php?id=50616">bradx3</a> on
+				2008-05-26 16:37:27			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230657">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230657'>#230657</a>
+			by <strong><a href="user.php?id=2017">RustyBadger</a> (Power User)</strong>
+			  
+3 hours and 28 minutes ago - <a href="#quickpost" onclick="Quote('230657','RustyBadger');">[Quote]</a>
+			</span>
+			<span id="bar230657" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://image.bayimg.com/iajmaaabg.jpg' width='150' alt="RustyBadger's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230657">
+				I think you should probably leave input boxes normal case.<br />
+You can test lightbox by clicking an image.<br />
+And I suppose you could take a copy of the frontpage html and edit to how you remember the poll to look, and apply your stylesheet. Or ask someone who hasn't answered it to copy you the html (sadly I have answered too.)			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230658">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230658'>#230658</a>
+			by <strong><a href="user.php?id=50616">bradx3</a> (Member)</strong>
+			  
+3 hours and 27 minutes ago - <a href="#quickpost" onclick="Quote('230658','bradx3');">[Quote]</a>
+ - <a href="#post230658" onclick="Edit_Form('230658');">[Edit]</a>
+			</span>
+			<span id="bar230658" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://blog.lucky-dip.net/images/theme/brad_head.gif' width='150' alt="bradx3's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230658">
+				ah thanks for the tips rustybadger.<br />
+<br />
+it's funny how much of the site you don't notice - i don't think i've ever clicked on an image before haha.<br />
+i'll mess with the poll some, and ask on irc. i'll post back any findings here for other people who might have the same problem.			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230663">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230663'>#230663</a>
+			by <strong><a href="user.php?id=542">mulletst0rm</a> (Beta Team)</strong>
+			 (<img src="pic/smilies/whip.gif">Here at the sufferance of Mrs. mulletst0rm) 
+3 hours and 19 minutes ago - <a href="#quickpost" onclick="Quote('230663','mulletst0rm');">[Quote]</a>
+			</span>
+			<span id="bar230663" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://img138.imageshack.us/img138/9135/kittenvy2.jpg' width='150' alt="mulletst0rm's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230663">
+				it's very nice, but has a few problems. you should add the following so that lightbox works:<br />
+<br />
+<blockquote><span style="font-family: courier;">.curtain {<br />
+	display: none;<br />
+	position: fixed;<br />
+	top: 0%;<br />
+	left: 0%;<br />
+	width: 100%;<br />
+	height: 100%;<br />
+	background-color: black;<br />
+	z-index: 1001;<br />
+	-moz-opacity: 0.8;<br />
+	opacity: .80;<br />
+	filter: alpha(opacity=80);<br />
+}<br />
+<br />
+.lightbox {<br />
+	display: none;<br />
+	position: fixed;<br />
+	text-align: center;<br />
+	top: 5%;<br />
+	left: 5%;<br />
+	width: 90%;<br />
+	height: 90%;<br />
+	padding: 0px;<br />
+	z-index: 1002;<br />
+	overflow: auto;<br />
+}<br />
+<br />
+</span></blockquote><br />
+<br />
+you haven't assigned anything for &quot;.show_torrents&quot; and &quot;.hide_torrents&quot;, so a large part of the torrent page functionality is missing.<br />
+<br />
+Edit/ Anyone who uses this stylesheet will be able to submit nothing except lowercase text, which I think is a big problem.				<br /><br />Last edited by
+				<a href="user.php?id=542">mulletst0rm</a> on
+				2008-05-26 17:07:33			</div>
+		</td>
+	</tr>
+</table>
+<table class="forum_post box vertical_margin" id="post230682">
+	<tr class="colhead_dark">
+		<td colspan="2">
+			<span style="float:left;"><a href='#post230682'>#230682</a>
+			by <strong><a href="user.php?id=50616">bradx3</a> (Member)</strong>
+			  
+2 hours and 49 minutes ago - <a href="#quickpost" onclick="Quote('230682','bradx3');">[Quote]</a>
+ - <a href="#post230682" onclick="Edit_Form('230682');">[Edit]</a>
+			</span>
+			<span id="bar230682" style="float:right;"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="avatar" valign="top">
+			<img src='http://blog.lucky-dip.net/images/theme/brad_head.gif' width='150' alt="bradx3's avatar" />
+		</td>
+		<td class="body" valign="top">
+			<div id="content230682">
+				ok cool thanks for the tips. i'll try to incorporate those changes and get a new version out.			</div>
+		</td>
+	</tr>
+</table>
+<h3>Quick Reply</h3>
+<div class="box pad" style="padding:20px 10px 10px 10px;">
+	<form id="quickpostform" action="" method="post" style="display: block; text-align: center;">
+		<div id="quickreplypreview" class="box" style="text-align: left; display: none; padding: 10px;"></div>
+		<div id="quickreplytext">
+			<input type="hidden" name="action" value="reply" />
+			<input type="hidden" name="thread" value="12820" />
+			<textarea id="quickpost" name="body"  cols="90"  rows="8"></textarea> <br />
+		</div>
+		<div id="quickreplybuttons">
+			<input type="button" value="Preview" onclick="Quick_Preview();" />
+			<input type="submit" value="Submit" />
+		</div>
+	</form>
+</div>
+
+<div class="linkbox">
+<a href="forums.php?page=1&amp;action=viewthread&amp;threadid=12820"><strong>&lt;&lt;</strong></a> <a href="forums.php?page=12&amp;action=viewthread&amp;threadid=12820"><strong>Prev</strong></a> | <a href="forums.php?page=1&amp;action=viewthread&amp;threadid=12820"><strong>1-25</strong></a> | <a href="forums.php?page=2&amp;action=viewthread&amp;threadid=12820"><strong>26-50</strong></a> | <a href="forums.php?page=3&amp;action=viewthread&amp;threadid=12820"><strong>51-75</strong></a> | <a href="forums.php?page=4&amp;action=viewthread&amp;threadid=12820"><strong>76-100</strong></a> | <a href="forums.php?page=5&amp;action=viewthread&amp;threadid=12820"><strong>101-125</strong></a> | <a href="forums.php?page=6&amp;action=viewthread&amp;threadid=12820"><strong>126-150</strong></a> | <a href="forums.php?page=7&amp;action=viewthread&amp;threadid=12820"><strong>151-175</strong></a> | <a href="forums.php?page=8&amp;action=viewthread&amp;threadid=12820"><strong>176-200</strong></a> | <a href="forums.php?page=9&amp;action=viewthread&amp;threadid=12820"><strong>201-225</strong></a> | <a href="forums.php?page=10&amp;action=viewthread&amp;threadid=12820"><strong>226-250</strong></a> | <a href="forums.php?page=11&amp;action=viewthread&amp;threadid=12820"><strong>251-275</strong></a> | <a href="forums.php?page=12&amp;action=viewthread&amp;threadid=12820"><strong>276-300</strong></a> | <strong>301-325</strong> | <a href="forums.php?page=14&amp;action=viewthread&amp;threadid=12820"><strong>326-329</strong></a> | <a href="forums.php?page=14&amp;action=viewthread&amp;threadid=12820"><strong>Next</strong></a> <a href="forums.php?page=14&amp;action=viewthread&amp;threadid=12820"><strong>&gt;&gt;</strong></a></div>
+</div>
+</div>
+<div id="footer">
+	<p>Site and design &copy; 2008 What.CD</p>
+	<p>This page was created in 0.00679 second(s) on Mon, 26 May 2008 08:16 PM</p>
+	<p>
+	
+</div>
+
+</div>
+<div id="lightbox" class="lightbox"></div>
+<div id="curtain" class="curtain"></div>
+</body>
+</html>

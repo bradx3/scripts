@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Swimming</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+
+    <script type="text/javascript" src="flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript">
+      $(document).ready( function() {
+	  initGraph(
+		  <%= Swim.notes.to_json %>,
+		  <%= Swim.minutes_per_km(:race => nil).to_json %>,
+		  <%= Swim.distances(:race => nil).to_json %>,
+		  <%= Swim.minutes_per_km(:race => true).to_json %>,
+		  <%= Swim.distances(:race => true).to_json %>
+	  )
+      });
+    </script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="placeholder" style="width:800px;height:400px;"></div>
+
+    <div id="times">
+      <h2>Times</h2>
+      <table class="stats">
+	<tr>
+	  <th>Average Training Time / km</th>
+	  <td><%= Swim.average_time(Swim.measured.training).to_time %></td>
+	</tr>
+	<tr>
+	  <th>Best Training Time / km</th>
+	  <td><%= Swim.best_training_swim.minutes_per_km.to_time %></td>
+	</tr>
+	<tr>
+	  <th>Best 1km Training Time</th>
+	  <td><%= Swim.best_training_swim(1000).minutes_per_km.to_time %></td>
+	</tr>
+	<tr>
+	  <th>Best 2km Training Time</th>
+	  <td><%= (Swim.best_training_swim(2000).total_seconds / 60.0).to_time %></td>
+	</tr>
+	<tr>
+	  <th>Best 3km Training Time</th>
+	  <td><%= (Swim.best_training_swim(3000).total_seconds / 60.0).to_time %></td>
+	</tr>
+	<tr>
+	  <th>Average Race Time / km</th>
+	  <td><%= Swim.average_time(Swim.races).to_time %></td>
+	</tr>
+      </table>
+    </div>
+
+    <div id="distances">
+      <h2>Distances</h2>
+      <table class="stats">
+	<tr>
+	  <th>Total Distance (km)</th>
+	  <td><%= Swim.sum(:distance) / 1000.0 %></td>
+	</tr>
+	<tr>
+	  <th>Average Training Distance (km)</th>
+	  <td><%= (Swim.training.average(:distance) / 1000.0).round(2) %></td>
+	</tr>
+	<tr>
+	  <th>Average Distance / month</th>
+	  <td>
+	    <%= (Swim.average_distance_per_month / 1000.0).round(2) %>
+	  </td>
+	</tr>
+	<tr>
+	  <th>Best Distance / month</th>
+	  <td>
+	    <% month, distance = Swim.best_distance_month %>
+	    <%= (distance / 1000.0).round(2) %>
+	    (<%= month %>)
+	  </td>
+	</tr>
+      </table>
+    </div>
+
+    <div id="log">
+      <h2>Log</h2>
+      <table class="stats">
+	<tr>
+	  <th></th>
+	  <th>Average Time</th>
+	  <th>Total Distance</th>
+	</tr>
+	<% 
+	   distances = Swim.total_distance_per_month 
+	   times = Swim.average_times_by_month
+
+	   first_month = Date.strptime(distances.first[0], "%B %Y")
+	   month = Date.today.at_beginning_of_month
+
+	   while month >= first_month
+	     month_str = month.strftime("%B %Y") %>
+ 	     <tr>
+	       <th><%= month_str %></th>
+	       <td>
+		 <% time = times.detect { |m, s| m == month_str } %>
+		 <%= time[1].to_time if time %>
+	       </td>
+	       <td>
+		 <% distance = distances.detect { |m, s| m == month_str } %>
+		 <%= (distance[1] / 1000.0).round(2) if distance %>
+	       </td>
+	     </tr>
+          <% 
+  	     month = month - 1.month
+	   end %>
+      </table>
+    </div>
+
+  </body>
+</html>

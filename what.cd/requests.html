@@ -1,0 +1,875 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Requests :: What.CD</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Torrents" href="/opensearch_torrents.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Requests" href="/opensearch_requests.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Forums" href="/opensearch_forums.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Log" href="/opensearch_log.xml">
+	<link rel="search" type="application/opensearchdescription+xml" title="What.CD - Users" href="/opensearch_users.xml">
+	<link rel="alternate" type="application/rss+xml" href="/feeds.php?user=50616&amp;auth=510b290f874fdf49d425b7ae4ecc5306" title="What.CD - News" />
+	<link href="what.css" title="External CSS" rel="stylesheet" type="text/css" media="screen" />
+	<link href="http://images.what.cd/styles/log.css" rel="stylesheet" type="text/css" />
+	<script src="http://images.what.cd/functions/global.js" type="text/javascript"></script>
+
+</head>
+<body id="requests">
+
+<div id="wrapper">
+<h1 class="hidden">What.cd</h1>
+
+<div id="header">
+	<div id="logo"><a href="index.php"></a></div>
+	<div id="userinfo">
+		<ul id="userinfo_username">
+			<li><a href="user.php?id=50616" class="username">bradx3</a></li>
+			<li class="brackets"><a href="user.php?action=edit&amp;userid=50616">Edit</a></li>
+			<li class="brackets"><a href="logout.php?auth=a0649725ade7e1a7e66f9f0284157685">Logout</a></li>
+		</ul>
+		<ul id="userinfo_major">
+			<li class="brackets"><strong><a href="upload.php">Upload</a></strong></li>
+			<li class="brackets"><strong><a href="user.php?action=invite">Invite</a></strong></li>
+			<li class="brackets"><strong><a href="donate.php">Donate</a></strong></li>
+		</ul>
+		<ul id="userinfo_stats">
+			<li>Up: <span class="stat">15.72 GB</span></li>
+			<li>Down: <span class="stat">15.10 GB</span></li>
+			<li>Ratio: <span class="stat"><span style="color:#74C42E">1.04</span></span></li>
+		</ul>
+		<ul id="userinfo_minor">
+			<li><a href="inbox.php">Inbox</a></li>
+			<li><a href="torrents.php?type=uploaded&amp;userid=50616">Uploads</a></li>
+			<li><a href="bookmarks.php">Bookmarks</a></li>
+			<li><a href="torrents.php?type=snatched&userid=50616">Snatches</a></li>
+			<li><a href="requests.php?type=created">Requests</a></li>
+			<li><a href="userhistory.php?action=posts&amp;userid=50616">Posts</a></li>
+			<li><a href="friends.php">Friends</a></li>
+		</ul>
+	</div>
+	<div id="menu">
+		<h4 class="hidden">Site Menu</h4>
+		<ul>
+			<li id="nav_index"><a href="index.php">Home</a></li>
+			<li id="nav_torrents"><a href="torrents.php">Torrents</a></li>
+			<li id="nav_requests"><a href="requests.php">Requests</a></li>
+			<li id="nav_forums"><a href="forums.php">Forums</a></li>
+			<li id="nav_top10"><a href="top10.php">Top&nbsp;10</a></li>
+			<li id="nav_rules"><a href="rules.php">Rules</a></li>
+			<li id="nav_kb"><a href="kb.php">Help</a></li>
+			<li id="nav_staff"><a href="staff.php">Staff</a></li>
+		</ul>
+	</div>
+	<div id="alerts">
+	</div>
+	<div id="searchbars">
+		<ul>
+			<li>
+				<span class="hidden">Torrents: </span>
+				<form action="torrents.php" method="get">
+					<input
+						onfocus="if (this.value == 'Torrents') this.value='';"
+						onblur="if (this.value == '') this.value='Torrents';"
+						value="Torrents" type="text" name="searchstr" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Requests: </span>
+				<form action="requests.php" method="get">
+					<input
+						onfocus="if (this.value == 'Requests') this.value='';"
+						onblur="if (this.value == '') this.value='Requests';"
+						value="Requests" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Forums: </span>
+				<form action="forums.php" method="get">
+					<input value="search" type="hidden" name="action" />
+					<input
+						onfocus="if (this.value == 'Forums') this.value='';"
+						onblur="if (this.value == '') this.value='Forums';"
+						value="Forums" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Log: </span>
+				<form action="log.php" method="get">
+					<input
+						onfocus="if (this.value == 'Log') this.value='';"
+						onblur="if (this.value == '') this.value='Log';"
+						value="Log" type="text" name="search" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+			<li>
+				<span class="hidden">Users: </span>
+				<form action="user.php" method="get">
+					<input type="hidden" name="action" value="search" />
+					<input
+						onfocus="if (this.value == 'Users') this.value='';"
+						onblur="if (this.value == '') this.value='Users';"
+						value="Users" type="text" name="username" size="18"
+					/>
+					<input value="Search" type="submit" class="hidden" />
+				</form>
+			</li>
+		</ul>
+	</div>
+
+</div>
+<div id="content">
+<div class="thin">
+	<h2>Requests</h2>
+	<div class="linkbox">
+ 
+		<a href="requests.php?action=new">[New request]</a>
+		<a href="requests.php?type=created">[My requests]</a>
+ 
+		<a href="requests.php?type=voted">[Requests I've voted on]</a>
+ 
+	</div>
+	<div class="center">
+		<form action="" method="get">
+			<table cellpadding="6" cellspacing="1" border="0" class="border" width="100%">
+				<tr>
+					<td class="label">Search terms:</td>
+					<td>
+						<input type="text" name="search" size="75" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td class="label">Tags (comma-separated):</td>
+					<td>
+						<input type="text" name="tags" size="75" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="center">
+						<input type="submit" value="Search requests" />
+					</td>
+				</tr>
+			</table>	
+		</form>
+	</div>
+	
+	<div class="linkbox">
+<strong>1-25</strong> | <a href="requests.php?page=2&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>26-50</strong></a> | <a href="requests.php?page=3&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>51-75</strong></a> | <a href="requests.php?page=4&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>76-100</strong></a> | <a href="requests.php?page=5&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>101-125</strong></a> | <a href="requests.php?page=6&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>126-150</strong></a> | <a href="requests.php?page=7&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>151-175</strong></a> | <a href="requests.php?page=8&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>176-200</strong></a> | <a href="requests.php?page=9&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>201-225</strong></a> | <a href="requests.php?page=10&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>226-250</strong></a> | <a href="requests.php?page=11&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>251-275</strong></a> | <a href="requests.php?page=2&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>Next</strong></a> <a href="requests.php?page=102&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>&gt;&gt;</strong></a>	</div>
+	<table cellpadding="6" cellspacing="1" border="0" class="border" width="100%">
+	<tr class="colhead_dark">
+		<td style="width:38%;">
+			<a href="requests.php?order=name&amp;sort=asc&search=&tag=&tags="><strong>Request Name</strong></a>
+		</td>
+		<td class="nobr"><strong>
+ 
+			<a href="requests.php?order=votes&amp;sort=desc&search=&tag=&tags=">Vote (20MB)</a>
+ 
+		</strong></td>
+		<td>
+			<a href="requests.php?order=bounty&amp;sort=desc&search=&tag=&tags="><strong>Bounty</strong></a>
+		</td>
+		<td><strong>Filled</strong></td>
+		<td><strong>Filled by</strong></td>
+		<td><strong>Requested by</strong></td>
+		<td>
+			<a href="requests.php?order=id&amp;sort=desc&search=&tag=&tags="><strong>Requested on</strong></a>
+		</td>
+	</tr>
+
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=19066" title="View Artist">Pepper</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3673" title="View Request">Pink Crustaceans and Good Vibrations</a>
+				<div class="tags">
+<a href="requests.php?tag=710">v0</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3673&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				160.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=1910">Mzungu</a>
+			</td>
+			<td>
+				2008-05-22 21:04			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=17505" title="View Artist">Cage</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3672" title="View Request">Depart From Me</a>
+				<div class="tags">
+<a href="requests.php?tag=155">hip.hop</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3672&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=5016">brknsound</a>
+			</td>
+			<td>
+				2008-05-22 20:57			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=20237" title="View Artist">Eikenskaden</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3671" title="View Request">The Last Dance [FLAC/log/cue]</a>
+				<div class="tags">
+<a href="requests.php?tag=14">classical</a>, <a href="requests.php?tag=39">metal</a>, <a href="requests.php?tag=480">black.metal</a>, <a href="requests.php?tag=9377">romantic.black.metal</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3671&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				150.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=2090">spoop</a>
+			</td>
+			<td>
+				2008-05-22 20:53			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=15274" title="View Artist">Jazztronik</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3670" title="View Request">Set Free</a>
+				<div class="tags">
+<a href="requests.php?tag=23">electronic</a>, <a href="requests.php?tag=38">jazz</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3670&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				200.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=33330">sn4ip3r</a>
+			</td>
+			<td>
+				2008-05-22 20:35			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48646" title="View Artist">Electro Group</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3669" title="View Request">Historical Contest</a>
+				<div class="tags">
+<a href="requests.php?tag=1057">shoegaze</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3669&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 20:27			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=48644" title="View Artist">The Black Watch</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3668" title="View Request">The Hypnotizing Sea</a>
+				<div class="tags">
+<a href="requests.php?tag=35">indie</a>, <a href="requests.php?tag=1057">shoegaze</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3668&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 20:23			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48644" title="View Artist">The Black Watch</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3667" title="View Request">Innercity Garden EP</a>
+				<div class="tags">
+<a href="requests.php?tag=35">indie</a>, <a href="requests.php?tag=1057">shoegaze</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3667&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 20:23			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=48644" title="View Artist">The Black Watch</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3666" title="View Request">Very Mary Beth</a>
+				<div class="tags">
+<a href="requests.php?tag=35">indie</a>, <a href="requests.php?tag=1057">shoegaze</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3666&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 20:22			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48644" title="View Artist">The Black Watch</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3665" title="View Request">The Christopher Smart EP</a>
+				<div class="tags">
+<a href="requests.php?tag=35">indie</a>, <a href="requests.php?tag=1057">shoegaze</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3665&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 20:22			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=48644" title="View Artist">The Black Watch</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3664" title="View Request">Lime Green Girl</a>
+				<div class="tags">
+<a href="requests.php?tag=35">indie</a>, <a href="requests.php?tag=1057">shoegaze</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3664&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 20:21			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48644" title="View Artist">The Black Watch</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3663" title="View Request">King of Good Intentions</a>
+				<div class="tags">
+<a href="requests.php?tag=35">indie</a>, <a href="requests.php?tag=1057">shoegaze</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3663&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 20:21			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=48640" title="View Artist">Comet</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3662" title="View Request">Chandelier Musings</a>
+				<div class="tags">
+<a href="requests.php?tag=1682">noisepop</a>, <a href="requests.php?tag=9363">davidbaker</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3662&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52390">rderington</a>
+			</td>
+			<td>
+				2008-05-22 19:51			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=1672" title="View Artist">Saosin</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3661" title="View Request">Saosin [IMPORT] [FLAC / Lossless / Log]</a>
+				<div class="tags">
+<a href="requests.php?tag=50">rock</a>, <a href="requests.php?tag=3207">saocore</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3661&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				55.50 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=51918">trnsltngthnm</a>
+			</td>
+			<td>
+				2008-05-22 19:29			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=48637" title="View Artist">Patrik Isaksson</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3660" title="View Request">Tillbaks P&aring; Ruta 1 CDA (2001)</a>
+				<div class="tags">
+<a href="requests.php?tag=42">pop</a>, <a href="requests.php?tag=50">rock</a>, <a href="requests.php?tag=198">swedish</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3660&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				650.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=456">sexten</a>
+			</td>
+			<td>
+				2008-05-22 19:08			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48635" title="View Artist">Solid Base</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3659" title="View Request">Party Totale! CDA (2001)</a>
+				<div class="tags">
+<a href="requests.php?tag=18">dance</a>, <a href="requests.php?tag=198">swedish</a>, <a href="requests.php?tag=273">norwegian</a>, <a href="requests.php?tag=945">eurodance</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3659&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				1.32 GB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=456">sexten</a>
+			</td>
+			<td>
+				2008-05-22 19:02			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=27488" title="View Artist">Dr. Dooom</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3658" title="View Request">RIP Dr. Octagon Maxi-Single</a>
+				<div class="tags">
+<a href="requests.php?tag=60">rap</a>, <a href="requests.php?tag=155">hip.hop</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3658&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=52683">arbee</a>
+			</td>
+			<td>
+				2008-05-22 18:59			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48634" title="View Artist">Tommy Nilsson</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3657" title="View Request">En Samling 1981-2001 CDA (2001)</a>
+				<div class="tags">
+<a href="requests.php?tag=42">pop</a>, <a href="requests.php?tag=50">rock</a>, <a href="requests.php?tag=198">swedish</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3657&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				650.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=456">sexten</a>
+			</td>
+			<td>
+				2008-05-22 18:55			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=2086" title="View Artist">Bracken</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3656" title="View Request">Eno About the Need 2xLP [FLAC]</a>
+				<div class="tags">
+<a href="requests.php?tag=3566">anticon</a>, <a href="requests.php?tag=9353">bracken</a>, <a href="requests.php?tag=9354">hood</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3656&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=6095">stevetrash</a>
+			</td>
+			<td>
+				2008-05-22 18:54			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48632" title="View Artist">Rafale</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3655" title="View Request">Rock it, Don&#39;t Stop It</a>
+				<div class="tags">
+<a href="requests.php?tag=23">electronic</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3655&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=18104">Sushisource</a>
+			</td>
+			<td>
+				2008-05-22 18:47			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=48630" title="View Artist">Vinskvetten</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3654" title="View Request">Dei Beste CDA (2000)</a>
+				<div class="tags">
+<a href="requests.php?tag=15">comedy</a>, <a href="requests.php?tag=17">country</a>, <a href="requests.php?tag=26">folk</a>, <a href="requests.php?tag=273">norwegian</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3654&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				650.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=456">sexten</a>
+			</td>
+			<td>
+				2008-05-22 18:38			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=22823" title="View Artist">Common Market</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3653" title="View Request">Tobacco Road</a>
+				<div class="tags">
+<a href="requests.php?tag=155">hip.hop</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3653&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=45034">joshg253</a>
+			</td>
+			<td>
+				2008-05-22 17:48			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=48619" title="View Artist">Jackie Martling</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3652" title="View Request">Hot Dogs and Dounuts</a>
+				<div class="tags">
+<a href="requests.php?tag=8595">comdey</a>, <a href="requests.php?tag=9327">jokes</a>, <a href="requests.php?tag=9328">jackiethejokemanmartling</a>, <a href="requests.php?tag=9329">howardstern</a>				</div>
+			</td>
+			<td>
+				1 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<a href="torrents.php?id=151444"><strong>Yes</strong></a>
+			</td>
+			<td>
+				<a href="user.php?id=4578">MrMonkey</a>
+			</td>
+			<td>
+				<a href="user.php?id=31840">Drewa311</a>
+			</td>
+			<td>
+				2008-05-22 16:49			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=48619" title="View Artist">Jackie Martling</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3651" title="View Request">F Jackie</a>
+				<div class="tags">
+<a href="requests.php?tag=9327">jokes</a>, <a href="requests.php?tag=9328">jackiethejokemanmartling</a>, <a href="requests.php?tag=9329">howardstern</a>				</div>
+			</td>
+			<td>
+				1 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<a href="torrents.php?id=151441"><strong>Yes</strong></a>
+			</td>
+			<td>
+				<a href="user.php?id=4578">MrMonkey</a>
+			</td>
+			<td>
+				<a href="user.php?id=31840">Drewa311</a>
+			</td>
+			<td>
+				2008-05-22 16:48			</td>
+		</tr>
+		<tr class="rowa">
+			<td>
+ 
+				<a href="artist.php?id=3562" title="View Artist">Quincy Jones</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3649" title="View Request">The Blues and the Abstract Truth</a>
+				<div class="tags">
+<a href="requests.php?tag=38">jazz</a>				</div>
+			</td>
+			<td>
+				1 
+			</td>
+			<td>
+				50.00 MB			</td>
+			<td>
+				<a href="torrents.php?id=38157"><strong>Yes</strong></a>
+			</td>
+			<td>
+				<a href="user.php?id=61547">mookieproof</a>
+			</td>
+			<td>
+				<a href="user.php?id=5666">FVIII</a>
+			</td>
+			<td>
+				2008-05-22 15:10			</td>
+		</tr>
+		<tr class="rowb">
+			<td>
+ 
+				<a href="artist.php?id=4124" title="View Artist">1 Mile North</a> - 
+ 
+				<a href="requests.php?action=viewrequest&amp;id=3648" title="View Request">Minor Shadows [FLAC]</a>
+				<div class="tags">
+<a href="requests.php?tag=6">ambient</a>				</div>
+			</td>
+			<td>
+				1&nbsp;&nbsp;					<a href="requests.php?action=vote&amp;id=3648&amp;auth=a0649725ade7e1a7e66f9f0284157685"><strong>(+)</strong></a>
+ 
+			</td>
+			<td>
+				600.00 MB			</td>
+			<td>
+				<strong>No</strong>
+			</td>
+			<td>
+				--
+			</td>
+			<td>
+				<a href="user.php?id=22135">switch7</a>
+			</td>
+			<td>
+				2008-05-22 14:26			</td>
+		</tr>
+	</table>
+	<div class="linkbox">
+<strong>1-25</strong> | <a href="requests.php?page=2&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>26-50</strong></a> | <a href="requests.php?page=3&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>51-75</strong></a> | <a href="requests.php?page=4&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>76-100</strong></a> | <a href="requests.php?page=5&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>101-125</strong></a> | <a href="requests.php?page=6&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>126-150</strong></a> | <a href="requests.php?page=7&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>151-175</strong></a> | <a href="requests.php?page=8&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>176-200</strong></a> | <a href="requests.php?page=9&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>201-225</strong></a> | <a href="requests.php?page=10&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>226-250</strong></a> | <a href="requests.php?page=11&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>251-275</strong></a> | <a href="requests.php?page=2&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>Next</strong></a> <a href="requests.php?page=102&amp;search=&amp;tag=&amp;tags=&amp;order=&amp;sort="><strong>&gt;&gt;</strong></a>	</div>
+</div>
+</div>
+<div id="footer">
+	<p>Site and design &copy; 2008 What.CD</p>
+	<p>This page was created in 0.00905 second(s) on Thu, 22 May 2008 09:44 PM</p>
+	<p>
+	
+</div>
+
+</div>
+<div id="lightbox" class="lightbox"></div>
+<div id="curtain" class="curtain"></div>
+</body>
+</html>
