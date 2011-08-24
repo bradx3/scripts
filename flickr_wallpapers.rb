@@ -9,6 +9,7 @@ require "readline"
 class FlickrWallpapers
   DEST = File.expand_path("~/Pictures/Wallpapers/")
   URLS = [
+          "http://api.flickr.com/services/feeds/photos_public.gne?id=10888427@N06&lang=en-us&format=atom",
           "http://api.flickr.com/services/feeds/groups_pool.gne?id=644548@N21&lang=en-us&format=atom",
           "http://api.flickr.com/services/feeds/groups_pool.gne?id=40961104@N00&lang=en-us&format=atom"
          ]
