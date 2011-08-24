@@ -2,6 +2,7 @@
 
 def chat
   system("ssh -f brad@clamps.lucky-dip.net -p 443 -g -L 5223:jabber.jamshidi.net:5223 -N")
+  system("ssh -f brad@clamps.lucky-dip.net -p 443 -g -L 5224:talk.google.com:5223 -N")
 end
 
 def smb
