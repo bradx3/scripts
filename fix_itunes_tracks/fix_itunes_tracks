@@ -1,0 +1,82 @@
+#!/usr/bin/env macruby
+framework 'Foundation'
+framework 'ScriptingBridge'
+
+load_bridge_support_file 'iTunes.bridgesupport'
+
+def itunes
+  @itunes ||= SBApplication.applicationWithBundleIdentifier("com.apple.itunes")
+end
+
+def selection
+  itunes.selection.get
+end
+
+def clean(str)
+  str.gsub("_", " ").strip
+end
+def clean_underscores
+  selection.each do |track|
+    track.name = clean(track.name)
+    track.artist = clean(track.artist)
+  end
+end
+
+def split_name_into_num_artist_and_name
+  selection.each do |track|
+    # with space delimiters
+    num, *rest = track.name.split(" ")
+    artist, name = *rest.join(" ").split("-")
+    # with - delimiters
+    #num, artist, name = track.name.split("-")
+    next if name.nil?
+
+    track.trackNumber = clean(num).to_i
+    track.name = clean(name)
+    track.artist = clean(artist)
+  end
+end
+
+def split_name_into_disc_num_artist_and_name
+  selection.each do |track|
+    disc, num, artist, name = track.name.split("-")
+    next if name.nil?
+
+    track.discNumber = disc.strip.to_i
+    track.trackNumber = num.strip.to_i
+    track.name = name.strip
+    track.artist = artist.strip
+  end
+end
+
+def split_name_into_name_and_artist
+  selection.each do |track|
+    name, artist = track.name.split("-")
+    next if name.nil?
+
+    track.name = name.strip
+    track.artist = artist.strip
+  end
+end
+
+def split_name_into_num_and_name
+  selection.each do |track|
+    num, *name = track.name.split("-")
+    name = name.join(" ")
+
+    track.trackNumber = clean(num).to_i
+    track.name = clean(name)
+  end
+end
+
+def titleize_name
+  itunes.selection.each do |track|
+    track.name = track.name.titleize
+  end
+end
+
+method = ARGV[0]
+if method && method.strip != ""
+  puts method
+  send method
+end
