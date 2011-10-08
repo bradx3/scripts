@@ -3,6 +3,7 @@ require 'csv'
 require 'pp'
 require 'plist'
 require 'mongoid'
+require 'levenshtein'
 
 Mongoid.database = Mongo::Connection.new('localhost').db('itunes')
 
@@ -107,15 +108,39 @@ class ItunesOrganiser < Struct.new(:file, :quick)
     done.length
   end
 
+  def check_artists
+    log("checking artists")
+    count = 0
+    artists = Track.only(:artist).aggregate.map { |info| info["artist"] }
+    artists = artists.compact.uniq.sort
+    artists.each do |name|
+      similar = artists.select { |a| a != name && similar?(name, a) }
+      if similar.any?
+        puts "--------------------------------------------------"
+        puts "SIMILAR ARTISTS"
+        puts "Name: #{name}, Similar: #{similar.join(", ")}"
+        count += 1
+      end
+    end
+
+    count
+  end
+
+  def similar?(s1, s2)
+    Levenshtein.distance(s1, s2) < 2
+  end
+
   def run
     load_into_mongo(tracks_from_xml) unless quick == "quick"
     bad_comp_count = check_compilations
     bad_genre_count = check_genres
     bad_year_count = check_years
+    bad_artist_count = check_artists
 
     puts "\n\n"
     log "Bad compilations: #{ bad_comp_count }"
     log "Bad genres: #{ bad_genre_count }"
+    log "Bad artists: #{ bad_artist_count }"
     log "Bad years: #{ bad_year_count }"
   end
 

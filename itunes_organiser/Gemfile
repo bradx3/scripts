@@ -3,3 +3,4 @@ source "http://rubygems.org"
 gem 'plist'
 gem 'mongoid'
 gem 'bson_ext'
+gem 'levenshtein-ffi'
